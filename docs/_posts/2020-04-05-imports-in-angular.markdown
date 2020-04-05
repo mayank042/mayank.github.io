@@ -16,9 +16,7 @@ lot of modules in a single module or if want to write a better reusable code.
 
 Add our custom paths to `tsconfig.json` so that angular compiler can identify them
 
-``` 
-// tsconfig.json
-
+```json
 {
     "compilerOptions": {
         "paths": {
@@ -44,8 +42,7 @@ Now
 Let's create a very simple service `http.service` which defines all basic methods for the HTTP calls like 
 `GET, POST, PUT, DELETE`
 
-```
-
+```typescript
 
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
@@ -68,8 +65,7 @@ export class HttpService {
 
 I have created a another service for defining all of my REST APIs
 
-```
-// src/app/services/rest.service.ts
+```typescript
 
 import {Injectable} from '@angular/core';
 import {HttpService} from './http.service';
@@ -98,8 +94,7 @@ our whole application, obliviously we need that place and it is a `index.ts`
 
 Let's create a `index.ts` for the services
 
-```
-// src/app/services/index.ts
+```typescript
 
 export * from './http.service';
 export * from './rest.service';
@@ -107,8 +102,8 @@ export * from './rest.service';
 
 #### Time to import
 >Notice how we import the **HttpService** service inside the *AppService*
-```
-// src/app/services/rest.service.ts
+
+```typescript
 
 import {HttpService} from '@services';
 
@@ -119,13 +114,12 @@ export class RestService {
 
   constructor(private http: HttpService) {
   }
- ...
 }
 ```
 
 Importing other modules (like - models etc in the same way)
 
-```
+```typescript
 import {IProducts} from '@models';
 ```
 
@@ -136,11 +130,11 @@ import {IProducts} from '@models';
 - You don't need to remember the file names anymore
 - Multiple imports reduced to single line
 > single  line import
-```
+```typescript
 import {HttpService, RestService} from '@services';
-``` 
-> general import  
 ```
+> general import  
+```typescript
 import {HttpService} from './http.service';
 import {RestService} from './rest.service';
 ```
