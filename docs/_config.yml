@@ -33,7 +33,7 @@ twitter_username: io_mayank
 github_username:  mayank042
 
 # Build settings
-theme: jekyll-theme-minimal
+theme: minima
 plugins:
   - jekyll-feed
 
