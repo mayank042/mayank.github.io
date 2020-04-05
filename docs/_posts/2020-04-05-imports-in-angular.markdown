@@ -2,7 +2,7 @@
 layout: post
 title:  "Angular - Better imports with indexing"
 date:   2020-04-05 11:00:00 +0530
-categories: Angular tips
+categories: Angular
 ---
 Importing modules, variables etc.. is the essential part of the modern programming languages.
 Sometimes it becomes little bit overwhelming to organise them in a large application, where we have to import 
